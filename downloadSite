@@ -2,6 +2,8 @@
 
 source common.sh
 
-./wget `basename $1` $1
-./zip `basename $1`
-rm -r $DOWNLOAD_DIR/`basename $1`
+HOST_NAME=`echo $1 | sed -e 's|^[^/]*//||' -e 's|/.*$||'`
+
+./wget $HOST_NAME $1
+./zip $HOST_NAME
+rm -r $DOWNLOAD_DIR/$HOST_NAME
