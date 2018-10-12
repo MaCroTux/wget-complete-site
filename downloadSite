@@ -2,8 +2,14 @@
 
 source common.sh
 
+# Host name
 HOST_NAME=`echo $1 | sed -e 's|^[^/]*//||' -e 's|/.*$||'`
 
+# Download sites
 ./wget $HOST_NAME $1
+
+# Compres sites
 ./zip $HOST_NAME
+
+# Remove data
 rm -r $DOWNLOAD_DIR/$HOST_NAME
