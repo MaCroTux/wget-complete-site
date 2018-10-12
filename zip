@@ -1,0 +1,11 @@
+#!/bin/sh
+
+source common.sh
+
+docker run 																																		 \
+	--rm 																																				 \
+	-v ${PWD}/download:/data 																                     \
+	brandography/alpine-zip 																										 \
+		zip -r                                                                     \
+      /data/$1.zip                                                             \
+      /data/$1
