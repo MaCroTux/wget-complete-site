@@ -1,10 +1,10 @@
 #!/bin/sh
 
-source common.sh
+source ./src/common.sh
 
 docker run 																																		 \
 	--rm 																																				 \
-	-v /Users/macro/proyect/wget/download:/data 																 \
+	-v ${PWD}/download:/data 																 \
 	mwendler/wget -S 																														 \
 		--no-check-certificate 																										 \
 		--recursive 																															 \

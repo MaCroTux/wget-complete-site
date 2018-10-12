@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source common.sh
+source ./src/common.sh
 
 docker run 																																		 \
 	--rm 																																				 \
